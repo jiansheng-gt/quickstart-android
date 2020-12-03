@@ -30,6 +30,7 @@ import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.dynamiclinks.DynamicLink;
 import com.google.firebase.dynamiclinks.FirebaseDynamicLinks;
 import com.google.firebase.dynamiclinks.PendingDynamicLinkData;
@@ -67,6 +68,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         // [END_EXCLUDE]
+
+        FirebaseAnalytics mFirebaseAnalytics =  FirebaseAnalytics.getInstance(this);
+
+        Bundle eventBundle = new Bundle();
+
+        mFirebaseAnalytics.logEvent("hello_test_event", eventBundle);
 
         // [START get_deep_link]
         FirebaseDynamicLinks.getInstance()

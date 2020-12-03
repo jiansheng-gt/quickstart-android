@@ -8,7 +8,7 @@ android {
     flavorDimensions "irrelevant"
 
     defaultConfig {
-        applicationId "com.google.firebase.quickstart.deeplinks"
+        applicationId "sg.test.dynamiclink"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
@@ -32,7 +32,7 @@ android {
 
             // TODO(developer): Replace this with your Dynamic Links URI prefix
             //                  See: https://firebase.google.com/docs/dynamic-links/android/create#set-up-firebase-and-the-dynamic-links-sdk
-            resValue "string", "dynamic_links_uri_prefix", "https://YOUR_APP.page.link"
+            resValue "string", "dynamic_links_uri_prefix", "https://molapp.page.link"
         }
     }
 
